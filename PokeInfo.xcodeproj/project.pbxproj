@@ -24,6 +24,7 @@
 		8DC50D7B26D35EEF003D97A3 /* PokemonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DC50D7A26D35EEF003D97A3 /* PokemonCell.xib */; };
 		8DC50D7D26D3651B003D97A3 /* RealmMigrationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC50D7C26D3651B003D97A3 /* RealmMigrationService.swift */; };
 		8DC50D7F26D36599003D97A3 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC50D7E26D36599003D97A3 /* RealmService.swift */; };
+		8DC50D8526D36DF1003D97A3 /* VotedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC50D8426D36DF1003D97A3 /* VotedViewModel.swift */; };
 		8DDB8C7326D18730001987E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDB8C7226D18730001987E8 /* AppDelegate.swift */; };
 		8DDB8C7526D18730001987E8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDB8C7426D18730001987E8 /* SceneDelegate.swift */; };
 		8DDB8C7726D18730001987E8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDB8C7626D18730001987E8 /* HomeViewController.swift */; };
@@ -74,6 +75,7 @@
 		8DC50D7A26D35EEF003D97A3 /* PokemonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PokemonCell.xib; sourceTree = "<group>"; };
 		8DC50D7C26D3651B003D97A3 /* RealmMigrationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmMigrationService.swift; sourceTree = "<group>"; };
 		8DC50D7E26D36599003D97A3 /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
+		8DC50D8426D36DF1003D97A3 /* VotedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VotedViewModel.swift; sourceTree = "<group>"; };
 		8DDB8C6F26D18730001987E8 /* PokeInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DDB8C7226D18730001987E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DDB8C7426D18730001987E8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -169,6 +171,29 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		8DC50D8126D36D8A003D97A3 /* Like */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Like;
+			sourceTree = "<group>";
+		};
+		8DC50D8226D36DAC003D97A3 /* Pokedex */ = {
+			isa = PBXGroup;
+			children = (
+				8D5EE00626D204D600D7D79F /* PokedexViewModel.swift */,
+			);
+			path = Pokedex;
+			sourceTree = "<group>";
+		};
+		8DC50D8326D36DBC003D97A3 /* Voted */ = {
+			isa = PBXGroup;
+			children = (
+				8DC50D8426D36DF1003D97A3 /* VotedViewModel.swift */,
+			);
+			path = Voted;
+			sourceTree = "<group>";
+		};
 		8DDB8C6626D18730001987E8 = {
 			isa = PBXGroup;
 			children = (
@@ -237,7 +262,9 @@
 		8DDB8CA326D18DBD001987E8 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				8D5EE00626D204D600D7D79F /* PokedexViewModel.swift */,
+				8DC50D8326D36DBC003D97A3 /* Voted */,
+				8DC50D8226D36DAC003D97A3 /* Pokedex */,
+				8DC50D8126D36D8A003D97A3 /* Like */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -522,6 +549,7 @@
 				8DDB8C7326D18730001987E8 /* AppDelegate.swift in Sources */,
 				8DC50D7D26D3651B003D97A3 /* RealmMigrationService.swift in Sources */,
 				8DC50D7926D3412F003D97A3 /* UIView.swift in Sources */,
+				8DC50D8526D36DF1003D97A3 /* VotedViewModel.swift in Sources */,
 				8D5EE00326D1E69900D7D79F /* API.swift in Sources */,
 				8D5EE00526D1EFD900D7D79F /* Generation.swift in Sources */,
 				8DDB8C7526D18730001987E8 /* SceneDelegate.swift in Sources */,

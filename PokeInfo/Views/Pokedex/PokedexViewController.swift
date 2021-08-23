@@ -11,7 +11,7 @@ class PokedexViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var generationsPickerView: UIPickerView!
-    let GENERATIONS_LIST = ["Generacion 1","Generacion 2","Generacion 3", "Generacion 4"]
+    let GENERATIONS_LIST = ["Generation 1","Generation 2","Generation 3", "Generation 4"]
     weak var viewModel = PokedexViewModel.shared
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,7 +75,7 @@ extension PokedexViewController : UIPickerViewDelegate, UIPickerViewDataSource {
 
 extension PokedexViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "detailPokedex", sender: viewModel?.generation.pokemonSpecies[indexPath.row].url)
+        performSegue(withIdentifier: "detailPokedex", sender: tableView.cellForRow(at: indexPath))
     }
 }
 

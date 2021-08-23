@@ -10,10 +10,12 @@ import UIKit
 
 extension UIView {
   func dropShadow(scale: Bool = true) {
-    self.layer.cornerRadius = self.frame.size.width/2
+    self.layer.cornerRadius = 50
     self.clipsToBounds = true
-
+    self.layer.shadowOffset = .zero
+    self.layer.shadowColor = UIColor.black.cgColor
     self.layer.borderColor = UIColor.white.cgColor
+    self.layer.shadowRadius = 10
     self.layer.borderWidth = 5.0
   }
     

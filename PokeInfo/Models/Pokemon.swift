@@ -117,10 +117,14 @@ struct TypeElement: Codable {
 class PokemonRealmObject: Object {
     @Persisted(primaryKey: true) var id: Int
     @Persisted var name = ""
+    @Persisted var saved = false
+    @Persisted var liked = false
     
-    convenience init(name: String) {
+    convenience init(name: String, id: Int, saved: Bool, liked: Bool) {
         self.init()
+        self.id = id
         self.name = name
-        
+        self.saved = saved
+        self.liked = liked
     }
 }

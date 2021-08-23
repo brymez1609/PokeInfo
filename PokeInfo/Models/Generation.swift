@@ -6,22 +6,6 @@
 //
 
 import Foundation
-// This file was generated from JSON Schema using quicktype, do not modify it directly.
-// To parse the JSON, add this file to your project and do:
-//
-//   let generation = try? newJSONDecoder().decode(Generation.self, from: jsonData)
-
-//
-// To read values from URLs:
-//
-//   let task = URLSession.shared.generationTask(with: url) { generation, response, error in
-//     if let generation = generation {
-//       ...
-//     }
-//   }
-//   task.resume()
-
-import Foundation
 
 // MARK: - Generation
 class Generation: Codable {
@@ -37,21 +21,8 @@ class Generation: Codable {
     init() {
         self.id = 0
         self.pokemonSpecies = [MainRegion]()
-//        let container = try decoder.container(keyedBy: CodingKeys.self)
-//        self.id = try container.decodeIfPresent(Int.self, forKey: .id) ?? 0
-//        self.pokemonSpecies = try container.decodeIfPresent([MainRegion].self, forKey: .pokemonSpecies) ?? [MainRegion]()
-//
     }
 }
-//
-// To read values from URLs:
-//
-//   let task = URLSession.shared.mainRegionTask(with: url) { mainRegion, response, error in
-//     if let mainRegion = mainRegion {
-//       ...
-//     }
-//   }
-//   task.resume()
 
 // MARK: - MainRegion
 class MainRegion: Codable {

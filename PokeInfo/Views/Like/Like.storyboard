@@ -18,16 +18,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lZW-JI-lVx">
-                                <rect key="frame" x="100" y="472" width="214" height="220"/>
+                                <rect key="frame" x="100" y="492" width="214" height="200"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LW2-2F-j0V">
-                                        <rect key="frame" x="10" y="10" width="194" height="210"/>
+                                        <rect key="frame" x="10" y="10" width="194" height="190"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.19638307079497641" green="0.35269851263127183" blue="0.43174667581163273" alpha="0.64955947572821815" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="220" id="EQ4-ep-pLK"/>
+                                    <constraint firstAttribute="height" constant="200" id="EQ4-ep-pLK"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="OCR-uo-gze"/>
                                     <constraint firstAttribute="trailing" secondItem="LW2-2F-j0V" secondAttribute="trailing" constant="10" id="SfG-3N-Dmg"/>
                                     <constraint firstAttribute="bottom" secondItem="LW2-2F-j0V" secondAttribute="bottom" id="lbO-uk-3M2"/>
                                     <constraint firstItem="LW2-2F-j0V" firstAttribute="leading" secondItem="lZW-JI-lVx" secondAttribute="leading" constant="10" id="sok-Z9-SJ4"/>
@@ -64,7 +65,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Pb-z5-aiP">
-                                <rect key="frame" x="0.0" y="397.5" width="414" height="54.5"/>
+                                <rect key="frame" x="0.0" y="417.5" width="414" height="54.5"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

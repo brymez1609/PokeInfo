@@ -15,14 +15,16 @@ class LikeViewController: UIViewController {
     @IBOutlet weak var likeButton: UIButton!
     @IBOutlet weak var pokemonName: UILabel!
     weak var viewModel = PokedexViewModel.shared
+    weak var votedViewModel = VotedViewModel.shared
     override func viewDidLoad() {
         super.viewDidLoad()
         pokemonImageView.addGestureRecognizer(handRecognizer)
         pokemonImageView.dropShadow()
         dislikeButton.addTarget(nil, action: #selector(dismissPokemon), for: .touchUpInside)
         likeButton.addTarget(nil, action: #selector(savePokemon), for: .touchUpInside)
+    }
+    override func viewWillAppear(_ animated: Bool) {
         getRandomPokemon()
-        
     }
     
     func getRandomPokemon() {
@@ -44,6 +46,10 @@ class LikeViewController: UIViewController {
     }
     
     @objc func savePokemon() {
+        guard let pokemon = self.viewModel?.pokemon else {
+            return
+        }
+        votedViewModel?.savePokemon(id: pokemon.id, name: pokemon.name, saved: true, liked: true)
         likeButton.animateButtons()
         getRandomPokemon()
         animator = UIViewPropertyAnimator()
@@ -56,6 +62,10 @@ class LikeViewController: UIViewController {
     }
     
     @objc func dismissPokemon() {
+        guard let pokemon = self.viewModel?.pokemon else {
+            return
+        }
+        votedViewModel?.savePokemon(id: pokemon.id, name: pokemon.name, saved: true, liked: false)
         dislikeButton.animateButtons()
         getRandomPokemon()
     }
@@ -69,12 +79,17 @@ class LikeViewController: UIViewController {
     var animator = UIViewPropertyAnimator()
     
     @objc private func handlePan(recognizer: UIPanGestureRecognizer) {
+        guard let pokemon = self.viewModel?.pokemon else {
+            return
+        }
         if case .Right = recognizer.horizontalDirection(target: self.pokemonImageView) {
                 animateView(number: 275, recognizer: recognizer)
                 likeButton.animateButtons()
+                votedViewModel?.savePokemon(id: pokemon.id, name: pokemon.name, saved: true, liked: true)
             } else {
                 dislikeButton.animateButtons()
                 animateView(number: -275, recognizer: recognizer)
+                votedViewModel?.savePokemon(id: pokemon.id, name: pokemon.name, saved: true, liked: false)
         }
     }
     func animateView(number:Int,recognizer: UIPanGestureRecognizer) {

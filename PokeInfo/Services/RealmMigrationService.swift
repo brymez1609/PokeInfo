@@ -16,7 +16,7 @@ class RealmMigrationService {
             schemaVersion: UInt64(migrationID),
             migrationBlock: { migration, oldSchemaVersion in
                 if (oldSchemaVersion < migrationID) {
-                    var nextID = 0
+                    var nextID = 2
                     migration.enumerateObjects(ofType: PokemonRealmObject.className()) { oldObject, newObject in
                         newObject!["id"] = nextID
                         nextID += 1
