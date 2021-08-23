@@ -4,6 +4,8 @@ platform :ios, '13.0'
 
 def common_pods
     pod 'RealmSwift', '~>10'
+    pod 'SOTabBar'
+    pod 'SwiftyJSON', '~> 4.0'
 end
 
 target 'PokeInfo' do
